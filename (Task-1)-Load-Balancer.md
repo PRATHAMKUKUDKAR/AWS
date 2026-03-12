@@ -45,3 +45,9 @@
 <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/d7f10966-8691-4a40-87e8-c7c02014a808" />
 9. Now you caan see All subnets
 <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/d1b7aa2c-b751-4996-abc1-d5eb4ff9f05c" />
+
+# Create Nat Gateway
+1. click on Nat Gateway
+2. click on create NAT Gateway
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/ab12774b-f4b3-4d64-9d99-0ffc80d69026" />
+
