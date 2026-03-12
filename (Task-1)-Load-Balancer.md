@@ -51,3 +51,27 @@
 2. click on create NAT Gateway
 <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/ab12774b-f4b3-4d64-9d99-0ffc80d69026" />
 
+# Internet Gateway 
+1. Internate Gateway Alreddy Atach
+
+# Create NAT Gateway 
+1. type Name *Project-NAT*
+2. Availability mode choice *Zonal*
+3. Select Subnet *Public-Sub-1*
+4. click on Alocate Elastic IP
+5. click on create NAT GAteway
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/591c5ca3-64fe-4520-9c9e-2529dfc3d7f5" />
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/0203a072-026d-4048-928a-ecd3ba21c96f" />
+
+
+# create Route Table 
+## Public Route Table
+1. we can create vpc so atomatical 1 route table is created
+2. click on Route table
+3. Edit Name *Public-Route-Table*
+4. click on Save
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/12bed074-85c3-4cff-aee9-f1368fbe1d3d" />
+5. select Public-Route-Table
+6. click on Routes
+7. click On edite Routes
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/65f62c15-e62d-4af6-b693-f3382a80612d" />
