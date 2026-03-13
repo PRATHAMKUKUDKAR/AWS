@@ -1,19 +1,3 @@
-#!/bin/bash
-
-# Update system
-sudo apt update -y
-
-# Install Apache
-sudo apt install apache2 -y
-
-# Start Apache
-sudo systemctl start apache2
-
-# Enable Apache at boot
-sudo systemctl enable apache2
-
-# Create Frontend HTML
-sudo tee /var/www/html/index.html > /dev/null <<EOF
 <!DOCTYPE html>
 <html>
 <head>
@@ -77,21 +61,21 @@ text-decoration:none;
 
 <div class="container">
 
-<a href="/train">
+<a href="http://Project-LB-551954984.ap-south-1.elb.amazonaws.com/train">
 <div class="card">
 <img src="https://img.icons8.com/color/96/train.png"/>
 <h2>Train Booking</h2>
 </div>
 </a>
 
-<a href="/bus">
+<a href="http://Project-LB-551954984.ap-south-1.elb.amazonaws.com/bus">
 <div class="card">
 <img src="https://img.icons8.com/color/96/bus.png"/>
 <h2>Bus Booking</h2>
 </div>
 </a>
 
-<a href="/flight">
+<a href="http://Project-LB-551954984.ap-south-1.elb.amazonaws.com/flight">
 <div class="card">
 <img src="https://img.icons8.com/color/96/airplane-take-off.png"/>
 <h2>Flight Booking</h2>
@@ -102,7 +86,3 @@ text-decoration:none;
 
 </body>
 </html>
-EOF
-
-# Restart Apache
-sudo systemctl restart apache2
