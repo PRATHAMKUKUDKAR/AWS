@@ -52,7 +52,9 @@
 <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/ab12774b-f4b3-4d64-9d99-0ffc80d69026" />
 
 # Internet Gateway 
-1. Internate Gateway Alreddy Atach
+1. Click On imternet Gateway
+2. click on Create Internet Gateway
+
 
 # Create NAT Gateway 
 1. type Name *Project-NAT*
