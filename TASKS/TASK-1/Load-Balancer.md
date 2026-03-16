@@ -15,10 +15,7 @@ This project demonstrates a **Highly Available AWS Architecture on AWS** using:
 ---
 
 # Architecture Flow
-
-```
-User → Load Balancer → Frontend → Backend Services
-```
+![Image](https://github.com/user-attachments/assets/d63b647e-5ca3-4aa1-a679-591020043460)
 
 Routing:
 
