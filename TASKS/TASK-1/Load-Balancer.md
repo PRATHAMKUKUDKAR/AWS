@@ -784,7 +784,181 @@ Flight-2
 
 ---
 
-# 8️⃣ Create Target Groups
+# 8️⃣ Create Backend EC2 on Private Subnet 2
+
+Instances
+
+```
+Train-2
+Bus-2
+Flight-2
+```
+
+---
+
+## Step 1
+
+Click **Instances**
+
+## Step 2
+
+Click **Launch Instance**
+
+<img width="1919" height="1078" src="https://github.com/user-attachments/assets/652ba565-59bd-4ad7-97f9-0b5903c447b7" />
+
+---
+
+## Step 3
+
+Instance Configuration
+
+```
+Name : Train-2
+AMI : Ubuntu
+Number of Instances : 3
+```
+
+<img width="1918" height="1079" src="https://github.com/user-attachments/assets/12c95f59-60ef-4797-a7c4-5daa0e17913c" />
+
+---
+
+## Step 4
+
+Instance Type & Key
+
+```
+Instance Type : t3.micro
+Key Pair : MumbaiKey
+```
+
+<img width="1919" height="1079" src="https://github.com/user-attachments/assets/6007a70a-52c5-492b-a67e-b5c041b08d14" />
+
+---
+
+## Step 5
+
+Network Configuration
+
+```
+VPC : Project-VPC
+Subnet : Private-Sub-2
+Auto Assign Public IP : Disable
+Security Group : Private-Security-Group
+```
+
+<img width="1919" height="1079" src="https://github.com/user-attachments/assets/798a4e00-9366-49c7-9a3e-d9bcba77c6c4" />
+
+---
+
+## Step 6
+
+Rename Instances
+
+```
+Train-2
+Bus-2
+Flight-2
+```
+
+<img width="1919" height="1079" src="https://github.com/user-attachments/assets/aad6270d-bffe-4161-9bc1-829f3769fa68" />
+
+---
+
+# Connect Train-2 Instance
+
+Login through **Bastion Host**
+
+SSH
+
+```
+ssh -i "MumbaiKey.pem" ubuntu@10.0.4.100
+```
+
+<img width="1919" height="1079" src="https://github.com/user-attachments/assets/97a82e63-4bf8-4787-9550-aa4b872adb35" />
+
+---
+
+Run Script
+
+```
+vi Train-2.sh
+chmod 777 Train-2.sh
+./Train-2.sh
+```
+
+Script
+
+```
+https://github.com/PRATHAMKUKUDKAR/AWS/blob/main/TASKS/TASK-1/Scripts/Train/Train-2.sh
+```
+
+<img width="1919" height="1079" src="https://github.com/user-attachments/assets/2871af02-c51e-4fe5-ba5b-d71ecdcf05e6" />
+
+---
+
+# Connect Bus-2 Instance
+
+SSH
+
+```
+ssh -i "MumbaiKey.pem" ubuntu@10.0.4.101
+```
+
+<img width="1919" height="1079" src="https://github.com/user-attachments/assets/b7f1d745-f444-4cd4-be6c-11cf742cddd9" />
+
+---
+
+Run Script
+
+```
+vi Bus-2.sh
+chmod 777 Bus-2.sh
+./Bus-2.sh
+```
+
+Script
+
+```
+https://github.com/PRATHAMKUKUDKAR/AWS/blob/main/TASKS/TASK-1/Scripts/Bus/Bus-2.sh
+```
+
+<img width="1919" height="1079" src="https://github.com/user-attachments/assets/22ff88d5-458c-4944-88e4-ae34df6729af" />
+
+---
+
+# Connect Flight-2 Instance
+
+SSH
+
+```
+ssh -i "MumbaiKey.pem" ubuntu@10.0.4.102
+```
+
+<img width="1919" height="1079" src="https://github.com/user-attachments/assets/df6af4d5-a6e5-498a-99ba-eb382ef2870d" />
+
+---
+
+Run Script
+
+```
+vi Flight-2.sh
+chmod 777 Flight-2.sh
+./Flight-2.sh
+```
+
+Script
+
+```
+https://github.com/PRATHAMKUKUDKAR/AWS/blob/main/TASKS/TASK-1/Scripts/Flight/Flight-2.sh
+```
+
+<img width="1919" height="1079" src="https://github.com/user-attachments/assets/438e1862-664b-4026-8bf1-62d279b4004f" />
+
+---
+
+
+
+# 9️⃣ Create Target Groups
 
 Target Groups
 
@@ -863,7 +1037,7 @@ Flight-TG
 
 ---
 
-# 9️⃣ Create Application Load Balancer
+# 🔟 Create Application Load Balancer
 
 <img width="1919" height="1075" src="https://github.com/user-attachments/assets/fc8bd5c4-ef3c-4d87-be55-0839abb44367" />
 
@@ -892,7 +1066,7 @@ Subnet : Public-Sub-2
 
 ---
 
-# 🔟 Path Based Routing
+# 1️⃣1️⃣ Path Based Routing
 
 Routes
 
@@ -904,7 +1078,7 @@ Routes
 
 ---
 
-# 1️⃣1️⃣ Access Website
+# 1️⃣2️⃣ Access Website
 
 Copy Load Balancer DNS
 
