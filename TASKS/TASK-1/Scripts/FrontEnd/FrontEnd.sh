@@ -1,3 +1,20 @@
+#!/bin/bash
+
+# Update packages
+sudo apt update -y
+
+# Install Apache
+sudo apt install apache2 -y
+
+# Start & enable Apache
+sudo systemctl start apache2
+sudo systemctl enable apache2
+
+# Remove default index page
+sudo rm -f /var/www/html/index.html
+
+# Create new index.html
+sudo tee /var/www/html/index.html > /dev/null <<EOF
 <!DOCTYPE html>
 <html>
 <head>
@@ -86,3 +103,9 @@ text-decoration:none;
 
 </body>
 </html>
+EOF
+
+# Restart Apache
+sudo systemctl restart apache2
+
+echo "Frontend deployed successfully 🚀"
